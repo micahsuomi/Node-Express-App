@@ -1,0 +1,22 @@
+body {
+    background-color: aqua;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+li {
+    margin: 1rem;
+}
+
+li a {
+    text-decoration: none;
+}
+
+img {
+    height: 10rem;
+    width: 10rem;
+}
