@@ -1,11 +1,21 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    background-color: aqua;
+    background-color: rgb(33, 41, 41);
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
 
 ul {
     list-style: none;
     display: flex;
     justify-content: center;
+    background-color: black;
+    align-items: center;
 }
 
 li {
@@ -14,9 +24,246 @@ li {
 
 li a {
     text-decoration: none;
+    color: white;
 }
 
+.container-home {
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.container {
+    padding: 4rem 4rem;
+}
+.images-container {
+    padding: 2rem 4rem;
+    margin-top: 3rem;
+}
 img {
     height: 10rem;
     width: 10rem;
+}
+
+.students-header {
+    text-align: center;
+}
+.students-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.techs-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    padding: 3rem 2rem;
+}
+
+
+
+
+.techs-header {
+    text-align: center;
+}
+
+.students-count__header {
+    margin-top: 2rem;
+}
+.student-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(50, 58, 66);
+    padding: 2rem 5rem;
+    border-radius: 10px;
+    margin: 2rem;
+    line-height: 1.5;
+    
+}
+
+.students-container a {
+    text-decoration: none;
+    color: white;
+    text-align: center;
+
+}
+
+.students-container a:hover {
+    color: skyblue;
+}
+
+.students-container-single {
+    padding: 3rem;
+}
+.tech-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(190, 205, 221);
+    padding: 4rem;
+    border-radius: 30px;
+    height: 13.5rem;
+    width: 12.5rem;
+    margin: 2rem;
+    line-height: 1.5;
+    color: black;
+
+}
+
+.image-tech {
+    width: 53%;
+    height: 47%;
+
+}
+
+/* add page */
+.form-container {
+    padding: 2rem 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.add-student__form {
+    padding: 2rem 3rem;
+    background-color: lightslategray;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    line-height: 2.9;
+}
+
+.form-title {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.inputs-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+input {
+    padding: .7rem;
+    border: none;
+    border-radius: 3px;
+}
+
+.add-student-btn__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+textarea {
+    width: 35rem;
+    padding: 1rem;
+    border-radius: 3px;
+}
+
+#bio {
+    width: 35rem;
+    padding: 1rem;
+    border-radius: 3px;
+}
+.btn {
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: rgb(167, 16, 109);
+    width: 10rem;
+    color: white;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: rgb(133, 25, 91);
+
+
+}
+
+.single-student-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+.student-container-single {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    line-height: 1.8;
+    padding: 3rem 2rem;
+    width: 30rem;
+}
+.edit-delete-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+
+
+}
+
+.edit-delete {
+    margin: 1rem;
+    background-color: rgb(55, 25, 110);
+    padding: 1rem;
+    width: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    
+}
+
+.edit-delete a {
+    
+}
+
+.btn-delete__techs,
+.btn-edit__techs {
+    width: 5rem;
+    text-decoration: none;
+    color: white;
+    padding: .6rem;
+    background-color: slateblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    text-transform: uppercase;
+    margin: .4rem;
+    
+}
+
+.btn-delete__techs {
+    background-color: rgb(205, 90, 138);
+
+}
+
+.tech-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.6;
+    padding: 2rem 3rem;
+}
+
+.tech-input {
+    width: 19rem;
+}
+.tech-select {
+    padding: .7rem;
+    width: 20.5rem;
+
+}
+.description {
+    width: 23rem;
+    padding: 1rem;
+    height: 10rem;
 }

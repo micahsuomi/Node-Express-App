@@ -1,0 +1,42 @@
+<%- include('../partials/head') %>
+
+<body>
+
+    <%- include('../partials/navbar') %>
+    <div class="single-student-container">
+
+    <div class="student-container" style="background: grey">
+
+    <% if (student) { %>
+        <div class="student-container-single">
+                <h2>
+                    <%= student.firstName %>
+                    <%= student.lastName %>
+                </h2>
+                <p>Age: 
+                    <%= student.age %>
+                </p>
+                <p>Country: 
+                    <%= student.country %>
+                </p>
+                <p>Skills: 
+                    <%= student.skills.join(', ') %>
+                </p>
+                <p>Bio:
+                    <%= student.bio %>
+                </p>
+                <div class="edit-delete-container">
+                <a class="edit-delete" href="/student/edit/<%= student._id %>">Edit</a>
+                <a class="edit-delete" href="/api/v1.0.0/students/api/<%= student._id %>/delete">Delete</a>
+            </div>
+            </div>
+
+      <% } %>
+</div>
+</div>
+
+​<%- include('../partials/footer') %>
+
+</body>
+
+</html>

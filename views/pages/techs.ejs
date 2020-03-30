@@ -1,0 +1,44 @@
+<%- include('../partials/head') %>
+
+<body>
+
+    <%- include('../partials/navbar') %>
+
+<body>
+    
+    <div class="container">
+    <h1 class="techs-header">Technologies</h1>
+    <p>There are <%= techs.length %> techs in the list</p>
+
+    <a href="/add-tech">Add New</a>
+
+    <div class="techs-container">
+        <% techs.forEach(function(tech) {%>
+        <div class="tech-container">
+            <img src="<%= tech.img %>" class="image-tech"></img>
+            <h3>
+            <%= tech.name %>
+        </h3>
+        <h4>Type:
+            <%= tech.type %>
+        </h4>
+        <p>Description
+            <%= tech.description %>
+        </p>
+        <div class="edit-delete-container">
+        <a href="/techs/<%= tech._id %>" class="btn-edit__techs" >Edit</a>
+        <a href="/techs/api/<%= tech._id %>/delete" class="btn-delete__techs">Delete</a>
+        </div>
+    </div>
+
+        <% }) %>
+    </div>
+
+</div>
+</div>
+​<%- include('../partials/footer') %>
+
+
+</body>
+
+</html>

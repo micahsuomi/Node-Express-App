@@ -1,0 +1,47 @@
+<%- include('../partials/head') %>
+
+<body>
+
+    <%- include('../partials/navbar') %>
+    <div class="container">
+    <h1 class="students-header">Students</h1>
+    <p className="students-count__header">There are <%= students.length %> students in the list</p>
+
+    <div class="students-container">
+
+    <% students.forEach(function(student) { %>
+        <div class="student-container">
+            <a href="/students/<%= student._id %>">
+
+        <h3>
+            <%= student.firstName %>
+        </h3>
+        <h3>
+            <%= student.lastName %>
+        </h3>
+        <p>
+            Age: <%= student.age %>
+        </p>
+
+        <p>
+            Country: <%= student.country %>
+        </p>
+
+        <p>
+            Skills: <%= student.skills.join(', ') %>
+        </p>
+        <p>
+            Bio: <%= student.bio %>
+        </p>
+        </a>
+    </div>
+
+      <% }) %>
+</div>
+</div>
+
+​<%- include('../partials/footer') %>
+
+</body>
+
+</html>
